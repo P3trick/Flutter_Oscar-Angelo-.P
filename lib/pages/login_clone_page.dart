@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_flutter/component/costum_text.dart';
-import 'package:project_flutter/component/custom_button_text.dart';
-import 'package:project_flutter/component/custom_textfield.dart';
+import 'package:project_flutter/components/costum_text.dart';
+import 'package:project_flutter/components/custom_button_text.dart';
+import 'package:project_flutter/components/custom_textfield.dart';
 
 class LoginClonePage extends StatelessWidget {
   const LoginClonePage({super.key});

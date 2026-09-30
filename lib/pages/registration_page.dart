@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:project_flutter/routes.dart';
+import 'package:project_flutter/components/custom_textfield.dart';
+
+class RegistrationPage extends StatelessWidget {
+  const RegistrationPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    TextEditingController txtNama = TextEditingController();
+
+    return Scaffold(
+
+      appBar: AppBar(title: Text("Registration Page")),
+      body: Column(
+
+        children: [
+          CustomTextField(
+            txtController: txtNama, 
+            hint: "input name"
+            ),
+
+          ElevatedButton(
+
+            onPressed: () {
+              // get to untuk pindah
+              // argument untuk kirim data
+              // get off
+              Get.toNamed(
+                routes.confirmreg,
+                arguments: {
+                  'name': txtNama.text.toString(),
+                  'jenis_kelamin': "laki laki", // dari widget kalian,
+                  // dll
+                },
+              );
+            },
+            child: Text("Send"),
+
+          ),
+
+        ],
+      ),
+    );
+  }
+}

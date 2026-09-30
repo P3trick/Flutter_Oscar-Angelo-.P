@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:project_flutter/kalkulator_page.dart';
-import 'package:project_flutter/login_page.dart';
-import 'package:project_flutter/login_clone.dart';
-import 'package:project_flutter/pages/kalkulator_page_stl.dart';
+import 'package:project_flutter/pages/kalkulator_page.dart';
+import 'package:project_flutter/pages/login_page.dart';
 import 'package:project_flutter/pages/login_clone_page.dart';
 import 'package:project_flutter/pages/kalkulator_page_stl.dart';
+import 'package:project_flutter/pages/registration_page.dart';
+import 'package:project_flutter/pages/confirmreg_page.dart';
+import 'package:project_flutter/routes.dart';
+import 'package:project_flutter/pages/registration_page.dart';
+import 'package:project_flutter/pages/confirmreg_page.dart';
+import 'package:get/get.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -16,11 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: KalkulatorPageStl(),
-      //home: LoginClonePage(),
-      //home: LoginPage(),
-      //home: KalkulatorPage(),
-      //home: InstagramLoginPage(),
+      title: 'My Learning App',
+      initialRoute: 'routes.registration',
+      getPages: routes.myPages,
     );
   }
 }
