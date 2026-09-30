@@ -12,7 +12,7 @@ class routes {
 
   static final myPages=[
     GetPage(name: registration, page: ()=> const RegistrationPage()),
-    GetPage(name: confirmreg, page: ()=> const ConfirmregPage()),
+    GetPage(name: confirmreg, page: ()=> ConfirmregPage()),
     GetPage(name: kalkulatorstl, page: ()=> KalkulatorPageStl()),
     GetPage(name: login, page: ()=> const LoginPage()),
   ];
