@@ -23,6 +23,21 @@ class ConfirmregPage extends StatelessWidget {
             style: TextStyle(fontSize: 25, color: Colors.blue),
           ),
 
+          Text(
+            "Email ${controller.email}",
+            style: TextStyle(fontSize: 25, color: Colors.blue),
+          ),
+
+          Text(
+            "Nomor WA ${controller.nowa}",
+            style: TextStyle(fontSize: 25, color: Colors.blue),
+          ),
+
+          Text(
+            "Alamat ${controller.alamat}",
+            style: TextStyle(fontSize: 25, color: Colors.blue),
+          ),
+
           ElevatedButton(
             onPressed: () {
               Get.back();

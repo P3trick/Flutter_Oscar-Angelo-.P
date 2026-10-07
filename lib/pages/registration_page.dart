@@ -10,6 +10,9 @@ class RegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     TextEditingController txtNama = TextEditingController();
+    TextEditingController txtEmail = TextEditingController();
+    TextEditingController txtNowa = TextEditingController();
+    TextEditingController txtAlamat = TextEditingController();
 
     return Scaffold(
 
@@ -20,8 +23,22 @@ class RegistrationPage extends StatelessWidget {
           CustomTextField(
             txtController: txtNama, 
             hint: "input name"
-            ),
+          ),
 
+          CustomTextField(
+            txtController: txtEmail, 
+            hint: "input email"
+          ),
+
+          CustomTextField(
+            txtController: txtNowa, 
+            hint: "input nomor wa"
+          ),
+
+          CustomTextField(
+            txtController: txtAlamat, 
+            hint: "input alamat"
+          ),
           ElevatedButton(
 
             onPressed: () {
@@ -32,8 +49,9 @@ class RegistrationPage extends StatelessWidget {
                 routes.confirmreg,
                 arguments: {
                   'name': txtNama.text.toString(),
-                  'jenis_kelamin': "laki laki", // dari widget kalian,
-                  // dll
+                  'email': txtEmail.text.toString(),
+                  'nowa': txtNowa.text.toString(),
+                  'alamat': txtAlamat.text.toString(),
                 },
               );
             },
