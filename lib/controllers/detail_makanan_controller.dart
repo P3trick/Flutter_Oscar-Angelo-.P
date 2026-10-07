@@ -29,7 +29,7 @@ class DetailMakananController extends GetxController {
       reviewMakanan: 80,
     ),
     DetailMakananModel(
-      gambarMakanan: "bolang_baling.jpg",
+      gambarMakanan: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJKePZgkk1dNd2Fiy8UfT-2BUdS86BMlGS5hwf57598RWbG3jT5yd_1cc&s=10",
       deskripsiMakanan: "Bolang baling adalah makanan ringan yang terbuat dari tepung dan gula.",
       ratingMakanan: 3.8,
       reviewMakanan: 60,
