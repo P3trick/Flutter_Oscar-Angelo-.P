@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project_flutter/controllers/confirmreg_controller.dart';
+import 'package:project_flutter/routes.dart';
 
 class ConfirmregPage extends StatelessWidget {
   ConfirmregPage({super.key});
@@ -24,11 +25,6 @@ class ConfirmregPage extends StatelessWidget {
           ),
 
           Text(
-            "Email ${controller.email}",
-            style: TextStyle(fontSize: 25, color: Colors.blue),
-          ),
-
-          Text(
             "Nomor WA ${controller.nowa}",
             style: TextStyle(fontSize: 25, color: Colors.blue),
           ),
@@ -39,10 +35,19 @@ class ConfirmregPage extends StatelessWidget {
           ),
 
           ElevatedButton(
+
+            onPressed: () {
+              Get.toNamed(routes.listmakanan);
+
+            },
+            child: Text("Next (list_makanan)"),
+          ),
+
+          ElevatedButton(
             onPressed: () {
               Get.back();
             },
-            child: Text("Oke"),
+            child: Text("Back"),
           ),
 
         ],
