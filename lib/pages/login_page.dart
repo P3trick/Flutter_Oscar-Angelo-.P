@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_flutter/components/custom_button.dart';
 import 'package:project_flutter/components/custom_textfield.dart';
+import 'package:get/get.dart';
+import 'package:project_flutter/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
 
     TextEditingController txtUsername = TextEditingController();
     TextEditingController txtPassword = TextEditingController();
-    String statusLogin = "";
+    String statusLogin = "Telah login";
 
     return Scaffold(
       appBar: AppBar(title: Text("Login Page"),),
@@ -23,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
         children: [
 
           Text(
-            "Welcome to Application " + statusLogin.toString(),
+            "Welcome to Application : " + statusLogin.toString(),
             style: TextStyle(
               fontSize: 20,
               color: Colors.blue,
@@ -78,6 +80,13 @@ class _LoginPageState extends State<LoginPage> {
               CustomButton(
                 text: "Register",
                 onPressed: () {
+                  Get.toNamed(Routes.registration);
+                },
+              ),
+              CustomButton(
+                text: "Kalkulator",
+                onPressed: () {
+                  Get.toNamed(Routes.kalkulatorstl);
                 },
               ),
             ],

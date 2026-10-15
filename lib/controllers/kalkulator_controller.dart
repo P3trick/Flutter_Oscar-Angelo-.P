@@ -43,4 +43,12 @@ class KalkulatorController extends GetxController {
     }
 
   }
+
+  void reset() {
+    hasil.value = 0;
+    Get.snackbar(
+      "Reset", 
+      "Hasil telah direset");
+  }
+
 }

@@ -8,7 +8,6 @@ class ConfirmRegController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     final arguments = Get.arguments;
     nama = arguments['name'];

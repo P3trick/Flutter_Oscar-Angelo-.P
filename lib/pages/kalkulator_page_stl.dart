@@ -112,7 +112,14 @@ class KalkulatorPageStl extends StatelessWidget {
               txtAngka2.clear();
               controller.hasil.value = 0;
             },
-          child: Text("Reset", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),),
+          child: Text("Reset", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.back();
+            },
+            child: Text("Back"),
+          ),
         ],
       ),
     );

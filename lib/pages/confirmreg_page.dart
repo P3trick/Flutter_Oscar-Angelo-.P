@@ -16,42 +16,38 @@ class ConfirmregPage extends StatelessWidget {
       appBar: AppBar(title: Text("Confirm Registration")),
 
       body: Column(
-
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-
           Text(
-            "Nama ${controller.nama}",
-            style: TextStyle(fontSize: 25, color: Colors.blue),
+            "Nama : ${controller.nama}",
+            style: TextStyle(fontSize: 25, color: Colors.black),
           ),
-
           Text(
-            "Nomor WA ${controller.nowa}",
-            style: TextStyle(fontSize: 25, color: Colors.blue),
+            "Email : ${controller.email}",
+            style: TextStyle(fontSize: 25, color: Colors.black),
           ),
-
           Text(
-            "Alamat ${controller.alamat}",
-            style: TextStyle(fontSize: 25, color: Colors.blue),
+            "Nomor WA : ${controller.nowa}",
+            style: TextStyle(fontSize: 25, color: Colors.black),
           ),
-
-          ElevatedButton(
-
-            onPressed: () {
-              Get.toNamed(routes.listmakanan);
-
-            },
-            child: Text("Next (list_makanan)"),
+          Text(
+            "Alamat : ${controller.alamat}",
+            style: TextStyle(fontSize: 25, color: Colors.black),
           ),
-
-          ElevatedButton(
-            onPressed: () {
-              Get.back();
-            },
-            child: Text("Back"),
+          Row(
+            children: [
+              Container(
+                width: 410,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Get.toNamed(Routes.listmakanan);
+                  },
+                  child: Text("Next (list_makanan)"),
+                ),
+              ),
+            ],
           ),
-
         ],
-
       ),
       
     );

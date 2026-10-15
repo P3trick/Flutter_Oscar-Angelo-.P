@@ -13,26 +13,64 @@ class DetailMakananPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Detail Makanan"),
       ),
-      body: Container(
-        margin: const EdgeInsets.all(10), 
-        child: ListView.builder(
-          itemCount: controller.detailMakanan.length,
-          itemBuilder: (context, index) {
-            final detailMakanan = controller.detailMakanan[index];
-            return InkWell(
-              onTap: () {
-                //labubu
-              },
-              child: ListTile(
-                title: Text(detailMakanan.deskripsiMakanan),
-                leading: Image.network(detailMakanan.gambarMakanan),
-                subtitle: Text("Rating: ${detailMakanan.ratingMakanan}"
-                    " | Review: ${detailMakanan.reviewMakanan}"),
-                trailing: Icon(Icons.arrow_forward_ios),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            
+            Image.network(
+              controller.gambarMakanan,
+              height: 200,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+            const SizedBox(height: 16),
+            
+            Text(
+              controller.namaMakanan,
+              style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
               ),
-            );
-          }
-        )
+            ),
+            const SizedBox(height: 8),
+            
+            Text(
+              controller.deskripsiMakanan,
+              style: const TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            
+            Text(
+              "Harga: ${controller.hargaMakanan}",
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.green,
+              ),
+            ),
+            const SizedBox(height: 8),
+            
+            Row(
+              children: [
+                const Text("Rating: "),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                ),
+                Text(
+                  "${controller.ratingMakanan}",
+                  style: const TextStyle(fontSize: 16),
+                ),
+                Text(
+                  " | ${controller.reviewMakanan} reviews",
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

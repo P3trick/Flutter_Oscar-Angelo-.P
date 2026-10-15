@@ -46,7 +46,7 @@ class RegistrationPage extends StatelessWidget {
               // argument untuk kirim data
               // get off
               Get.toNamed(
-                routes.confirmreg,
+                Routes.confirmreg,
                 arguments: {
                   'name': txtNama.text.toString(),
                   'email': txtEmail.text.toString(),
@@ -56,9 +56,13 @@ class RegistrationPage extends StatelessWidget {
               );
             },
             child: Text("Send"),
-
           ),
-
+          ElevatedButton(
+            onPressed: () {
+              Get.back();
+            },
+            child: Text("Back"),
+          ),
         ],
       ),
     );

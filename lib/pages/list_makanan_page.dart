@@ -15,23 +15,47 @@ class ListMakananPage extends StatelessWidget {
         title: const Text("List Makanan"),
       ),
       body: Container(
-        margin: const EdgeInsets.all(10), 
+        margin: const EdgeInsets.all(10),
         child: ListView.builder(
           itemCount: controller.listMakanan.length,
           itemBuilder: (context, index) {
             final makanan = controller.listMakanan[index];
-            return InkWell(
-              onTap: () {
-                Get.toNamed(routes.detailmakanan);
-              },
-              child: ListTile(
-                title: Text(makanan.namaMakanan),
-                subtitle: Text(makanan.hargaMakanan),
-                trailing: Icon(Icons.arrow_forward_ios),
+            return Dismissible(
+              key: ValueKey(makanan.namaMakanan),
+              direction: DismissDirection.endToStart,
+              background: Container(
+                color: Colors.red,
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 20),
+                child: const Icon(Icons.delete, color: Colors.white),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Get.toNamed(
+                    Routes.detailmakanan,
+                    arguments: makanan,
+                  );
+                },
+                child: Card(
+                  elevation: 10,
+                  child: Container(
+                    margin: const EdgeInsets.all(10),
+                    child: ListTile(
+                      title: Text(
+                          makanan.namaMakanan,
+                          style: TextStyle(fontSize: 40),
+                      ),
+                      subtitle: Text(
+                          "Rp. " + makanan.hargaMakanan,
+                          style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             );
-          }
-        )
+          },
+        ),
       ),
     );
   }
