@@ -59,7 +59,20 @@ class ConfirmregPage extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
+          Row(
+            children: [
+              Container(
+                width: 410,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Get.toNamed(Routes.drawer);
+                  },
+                  child: Text("Next (menu_drawer_page)"),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       

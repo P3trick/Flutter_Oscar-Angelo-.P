@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:project_flutter/pages/confirmreg_page.dart';
 import 'package:project_flutter/pages/kalkulator_page_stl.dart';
+import 'package:project_flutter/pages/menu_drawer_page.dart';
 import 'package:project_flutter/pages/registration_page.dart';
 import 'package:project_flutter/pages/login_page.dart';
 import 'package:project_flutter/pages/list_makanan_page.dart';
@@ -15,6 +16,7 @@ class Routes {
   static const String listmakanan = '/listmakanan';
   static const String detailmakanan = '/detailmakanan';
   static const String mainmenu = '/mainmenupage';
+  static const String drawer = '/menudrawerpage';
 
   static final myPages = [
     GetPage(name: registration,   page: () => const RegistrationPage()),
@@ -24,5 +26,6 @@ class Routes {
     GetPage(name: listmakanan,    page: () => ListMakananPage()),
     GetPage(name: detailmakanan,  page: () => DetailMakananPage()),
     GetPage(name: mainmenu,       page: () => MainMenuPage()),
+    GetPage(name: drawer,         page: () => MenuDrawerPage())
   ];
 }
